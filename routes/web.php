@@ -12,10 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" d group. Now create something great!
 |
 */
-use App\http\Controllers\EventController;
+use App\Http\Controllers\EventoController;
 
-Route::get('/', [eventController::class, 'index']);
-Route::get('/events/create', [eventsController::class, 'create']);
+Route::get('/', [EventoController::class, 'index']);
+Route::get('/evento/create', [EventoController::class, 'create']);
 
 Route::get('/contact', function () {
     return view('contact');

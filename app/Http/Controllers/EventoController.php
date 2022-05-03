@@ -20,4 +20,34 @@ class EventoController extends Controller
         public function create() {
             return view('evento.create');
         }
+        public function store(Request $request) {
+            $evento = new Evento;
+
+            $evento->title = $request->title;
+            $evento->city = $request->city;
+            $evento->private = $request->private;
+            $evento->description = $request->description;
+            // Image Upload
+
+            if($request->hasFile('image') && $request->file('image')->isValid()) {
+                $requestImage = $request->image;
+
+                $extension = $requestImage->extension();
+
+                $imageName = md5($requestImage->image->getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+                $request->image->move(public_path('img/evento'), $imageName);
+
+                $evento ->image = $imageName;
+            }
+
+
+            
+            $evento->save();
+
+            return redirect('/')->with('msg', 'Evento criado com sucesso!');
+
+
+
+        }
 }

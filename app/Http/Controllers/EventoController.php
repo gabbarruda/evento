@@ -11,22 +11,33 @@ class EventoController extends Controller
 {
 
     public function index() {
-
-        $evento = Evento::all();
         
-            return view('welcome',['eventos' => $evento]);
+        $search = request('search');
+        if ($search) {
+
+            $eventos = Evento::Where([
+                ['title', 'like', '%'.$search.'%']
+            ])->get();
+
+        } else {
+           $eventos = Evento::all();
+        }        
+            return view('welcome',['eventos' => $eventos, 'search' => $search]);
         }
         
         public function create() {
             return view('evento.create');
         }
         public function store(Request $request) {
-            $evento = new Evento;
+            $evento = new evento;
 
             $evento->title = $request->title;
+            $evento->date = $request->date;
             $evento->city = $request->city;
             $evento->private = $request->private;
             $evento->description = $request->description;
+            $evento->items = $request->items;
+
             // Image Upload
 
             if($request->hasFile('image') && $request->file('image')->isValid()) {
@@ -52,9 +63,9 @@ class EventoController extends Controller
         }
         
 public function show($id) {
-    $eventos = Evento::findOrFail($id);
+    $evento = Evento::findOrFail($id);
 
-    return view('evento.show', ['evento' => $eventos]);
+    return view('evento.show', ['evento' => $evento]);
 
 }
 

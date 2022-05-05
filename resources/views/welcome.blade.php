@@ -6,10 +6,11 @@
 
     <div id="search-container" class="col-md-12">
         <h1>Busque um evento</h1>
-        <form action="">
-            <input type="text" id="search" name="search" class="form-control" placeholder="Procurar..."> </form>
+        <form action="/" method="GET">
+            <input type="text" id="search" name="search" class="form-control" placeholder="Procurar..."> 
+        </form>
     </div>
-    <div id="events-contrainer" class="col-md-12">
+    <div id="eventos-contrainer" class="col-md-12">
      <h2>Próximos Eventos</h2>
         <p class="subtitle">Veja os Eventos dos próximos dias</p>
         <div id="cards-container" class="row">
@@ -20,7 +21,7 @@
 
 
                     <div class="card-body">
-                        <p class="card-date">02/05/2022</p>
+                        <p class="card-date">{{ date('d/m/Y', strtotime($evento->date)) }}</p>
                         <h5 class="card-title">{{ $evento->title }}</h5>
                         <p class="card-participantes">X Participantes</p>
                         <a href="{{route('show', ['id'=>$evento->id])}}" class="btn btn-primary">Saber mais</a>
@@ -28,6 +29,9 @@
                     </div>
                 </div>
             @endforeach
+            @if(count($eventos) == 0)
+            <p>Não há eventos disponiveis</p>
+            @endif
 
         </div>
     </div>

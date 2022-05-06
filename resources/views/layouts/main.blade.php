@@ -33,10 +33,10 @@
                     <a href="{{route('create')}}" class="nav-link">Criar Eventos</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/" class="nav-link">Entrar</a>
+                    <a href="{{ url ('')}}/login" class="nav-link">Entrar</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/" class="nav-link">Cadastrar</a>
+                    <a href="{{ url ('')}}/register" class="nav-link">Cadastrar</a>
                 </li>
             </ul>
         </div>

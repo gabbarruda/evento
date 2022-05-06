@@ -30,14 +30,30 @@
                     <a href="/" class="nav-link">Eventos</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('create')}}" class="nav-link">Criar Eventos</a>
+                    <a href="{{route('create')}}/dashboard" class="nav-link">Criar Eventos</a>
                 </li>
+                @auth    
                 <li class="nav-item">
-                    <a href="{{ url ('')}}/login" class="nav-link">Entrar</a>
+                    <a href="{{ url ('')}}/login" class="nav-link">Meus eventos</a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{ url ('')}}/register" class="nav-link">Cadastrar</a>
-                </li>
+                <form action="{{ url ('')}}/logout" method="POST">
+                    @csrf
+                    <a href="/logout"
+                     class="nav-link" 
+                     onclick="event.preventDefault();
+                     this.closest('form').submit();">
+                     Sair
+                    </a>
+                </form>
+                @endauth
+                @guest
+            <li class="nav-item">
+                <a href="{{ url ('')}}/login" class="nav-link">Entrar</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url ('')}}/register" class="nav-link">Cadastrar</a>
+            </li>   
+                @endguest
             </ul>
         </div>
     </nav>

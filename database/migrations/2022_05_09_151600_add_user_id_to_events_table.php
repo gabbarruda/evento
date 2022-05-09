@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('eventos', function (Blueprint $table) {
-            $table->dateTime('date');
+            $table->foreignId('user_id')->constrained();
         });
     }
 
@@ -26,7 +26,9 @@ return new class extends Migration
     public function down()
     {
         Schema::table('eventos', function (Blueprint $table) {
-            $table->dropColumn('date');
+            $table->foreignId('user_id')
+            ->constrained()
+            ->onDelete('cascade');
         });
     }
 };

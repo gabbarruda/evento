@@ -22,7 +22,7 @@
     <body> 
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                <img src="{{url('')}}/img/logo.png"width="100" height="100" alt ="HDC Events">
+                <img src="{{url('')}}/img/logo.png"width="100" height="100" alt ="HDC Eventos">
             </a>
       
             <ul class="nav nav-pills">
@@ -30,7 +30,7 @@
                     <a href="/" class="nav-link">Eventos</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('create')}}/dashboard" class="nav-link">Criar Eventos</a>
+                    <a href="{{ route ('create')}}" class="nav-link">Criar Eventos</a>
                 </li>
                 @auth    
                 <li class="nav-item">
@@ -41,7 +41,7 @@
                     <a href="/logout"
                      class="nav-link" 
                      onclick="event.preventDefault();
-                     this.closest('form').submit();">
+                     this.closet('form').submit();">
                      Sair
                     </a>
                 </form>
@@ -68,9 +68,13 @@
             </div>
               </div>
           </main>
-        <footer>
-            <p>HDC Events &copy; 2022</p>
-        </footer>
+       <footer>
+        <div class="sw_info_sistema">
+            <i class="bi bi-wrench-adjustable"></i><span class="swfa fas fa-wrench sw_icone_info_sistema"></span>
+            <span class="sw_texto_info_sistema">Versão do Sistema: <strong>3.2.2 - 02/05/2022</strong></span>
+        </div>
+        <span class="swfa far fa-clock sw_icone_info_sistema"></span>
+        <i class="bi bi-stopwatch"></i><span class="sw_texto_info_sistema">Portal atualizado em: <strong>09/05/2022 - 15:53</strong></span>        </footer> 
         <script> src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"</script>
     </body>
 </html>

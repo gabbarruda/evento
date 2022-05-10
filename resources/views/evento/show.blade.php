@@ -13,7 +13,7 @@
         <h1>{{ $evento->title }}</h1>
         <p class="evento-city"><i class="bi bi-geo-alt-fill"></i> {{ $evento->city }}</p>
         <p class="evento-participantes"><i class="bi bi-people-fill"></i> X Participantes</p>
-        <p class="evento-owner"><i class="bi bi-star-fill"></i> Dono do Evento</p>
+        <p class="evento-owner"><i class="bi bi-star-fill"></i> {{ $eventoOwner['name'] }}</p>
         <a href="#" class="btn btn-primary" id="evento-submit">Confirmar presença</a>
         <h3>O evento conta com:</h3>
         <ul id="items-list">

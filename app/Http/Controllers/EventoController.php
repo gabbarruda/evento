@@ -7,6 +7,8 @@ use App\Models\Event;
 use App\Models\Evento;
 use Illuminate\Http\Request;
 
+use App\Models\User;
+
 class EventoController extends Controller
 {
 
@@ -67,8 +69,19 @@ class EventoController extends Controller
 public function show($id) {
     $evento = Evento::findOrFail($id);
 
-    return view('evento.show', ['evento' => $evento]);
+    $eventoOwner = User::where('id', $evento->user_id)->first()->toArray();
 
+    return view('evento.show', ['evento' => $evento, 'eventoOwner' => $eventoOwner]);
+
+}
+
+public function dashboard(){
+
+     $user = auth()->user();
+
+     $evento = $user->evento;
+
+     return view('evento.dashboard', ['evento' => $evento]);
 }
 
 }

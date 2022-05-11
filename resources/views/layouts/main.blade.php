@@ -14,12 +14,28 @@
 
         <!-- CSS da aplicação --> 
         <link rel="stylsheet"href="{{url('')}}/css/styles.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="{{url('')}}/js/scripts.js"></script>
 
         <link rel="stylesheet" href="{{url('')}}/css/styles.css">
         <script src="{{url('')}}/js/scripts.js"></script>
     </head>
     <body> 
+           <!-- BUSCA / ACESSIBILIDADE -->
+           <div class="e_area_busca_acessibilidade">
+            <!-- ACESSIBILIDADE -->
+            <div class="e_area_acessibilidade unselect">
+                <a class="aumentar"><div class="e_btn_acessibilidade e_lato_black" title="Aumentar textos do site"><i class="bi bi-zoom-in"></i></div></a>
+                <a class="diminuir"><div class="e_btn_acessibilidade e_lato_black" title="Diminuir textos do site"><i class="bi bi-zoom-out"></i></div></a>
+                <a id="contraste" accesskey="5"><div class="e_btn_acessibilidade" title="Aumentar/diminuir contraste"><span class="fa fa-adjust" aria-hidden="true"></span><span class="e_trans"><i class="bi bi-circle-half"></i></div></a>
+                <a href="/portal/mapa"><div class="e_btn_acessibilidade" title="Ir para o mapa do site"><span class="fa fa-map-marker" aria-hidden="true"></span><span class="e_trans"><i class="bi bi-geo-alt"></i></span></div></a>
+                <a href="/portal/acessibilidade" accesskey="6"><div class="e_btn_acessibilidade" title="Ir para a página de acessibilidade"><span class="fa fa-wheelchair" aria-hidden="true"></span><span class="e_trans">acessibilidade</span></div></a>
+                <!-- LINKS ACESSIBILIDADE -->
+        
+            </div>								
+        </div>
+    </div>
+    
         
         
 

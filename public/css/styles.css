@@ -216,3 +216,64 @@
         footer p {
             margin-bottom: 0;
         }
+        
+        .e_area_acessibilidade {
+            margin-bottom: 7px;
+            font-size: 0;
+        }
+        
+        .e_area_acessibilidade .e_btn_acessibilidade {
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            display: inline-block;
+            vertical-align: bottom;
+            background: #dcefe6;
+            color: #016839;
+            font-size: 11px;
+            text-align: center;
+            border-radius: 100%;
+            margin-right: 3px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.2s;
+        }
+        
+        .e_area_acessibilidade .e_btn_acessibilidade span {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .e_area_acessibilidade .e_btn_acessibilidade .fa {
+            font-size: 13px;
+            position: relative;
+            top: 1px;
+            z-index: 1;
+        }
+        
+        .e_area_acessibilidade .e_btn_acessibilidade::after {
+            content: "";
+            position: absolute;
+            left: -50%;
+            top: -50%;
+            width: 200%;
+            height: 200%;
+            background: #016839;
+            border-radius: 100%;
+            visibility: hidden;
+            opacity: 0;
+            transform: scale(0);
+            z-index: 0;
+            transition: 0.3s ease;
+        }
+        
+        .e_area_acessibilidade .e_btn_acessibilidade:hover::after {
+            visibility: visible;
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .e_area_acessibilidade .e_btn_acessibilidade:hover {
+            color: #fff;
+            cursor: pointer;
+        }

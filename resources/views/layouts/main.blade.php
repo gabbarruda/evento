@@ -2,6 +2,9 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
+        <title>Evento</title>
+
+        
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>@yield('title')</title>
@@ -25,13 +28,25 @@
            <div class="e_area_busca_acessibilidade">
             <!-- ACESSIBILIDADE -->
             <div class="e_area_acessibilidade unselect">
-                <a class="aumentar"><div class="e_btn_acessibilidade e_lato_black" title="Aumentar textos do site"><i class="bi bi-zoom-in"></i></div></a>
-                <a class="diminuir"><div class="e_btn_acessibilidade e_lato_black" title="Diminuir textos do site"><i class="bi bi-zoom-out"></i></div></a>
-                <a id="contraste" accesskey="5"><div class="e_btn_acessibilidade" title="Aumentar/diminuir contraste"><span class="fa fa-adjust" aria-hidden="true"></span><span class="e_trans"><i class="bi bi-circle-half"></i></div></a>
-                <a href="/portal/mapa"><div class="e_btn_acessibilidade" title="Ir para o mapa do site"><span class="fa fa-map-marker" aria-hidden="true"></span><span class="e_trans"><i class="bi bi-geo-alt"></i></span></div></a>
-                <a href="/portal/acessibilidade" accesskey="6"><div class="e_btn_acessibilidade" title="Ir para a página de acessibilidade"><span class="fa fa-wheelchair" aria-hidden="true"></span><span class="e_trans">acessibilidade</span></div></a>
+                <a class="aumentar"><div class="e_btn_acessibilidade e_lato_black" title="Aumentar textos do site"><i class="bi bi-zoom-in"></i></div>aumentar</a>
+                <a class="diminuir"><div class="e_btn_acessibilidade e_lato_black" title="Diminuir textos do site"><i class="bi bi-zoom-out"></i></div>>diminuir</a>
+                <a id="contraste" accesskey="5"><div class="e_btn_acessibilidade" title="Aumentar/diminuir contraste"><span class="fa fa-adjust" aria-hidden="true"></span><span class="e_trans"></div>contraste</a>
+                {{-- <a href="/portal/mapa"><div class="e_btn_acessibilidade" title="Ir para o mapa do site"><span class="fa fa-map-marker" aria-hidden="true"></span><span class="e_trans"><i class="bi bi-geo-alt"></i></span></div></a>
+                <a href="/portal/acessibilidade" accesskey="6"><div class="e_btn_acessibilidade" title="Ir para a página de acessibilidade"><span class="fa fa-wheelchair" aria-hidden="true"></span><span class="e_trans">acessibilidade</span></div></a> --}}
                 <!-- LINKS ACESSIBILIDADE -->
-        
+
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+                <meta name="csrf-token" content="{{ csrf_token() }}" />
+                <meta name="description" content=" " />
+                <meta name="keywords" content="" />
+                <meta content="" name="author" />
+                <link rel="shortcut icon" href="{{url('')}}/images/favicon.png">
+                <link href="{{url('')}}/plugins/bootstrap/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+                <link rel="stylesheet" type="text/css" href="{{url('')}}/plugins/sweetalert2/sweetalert2.min.css">
+                <link href="{{url('')}}/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+                <link href="{{url('')}}/css/contraste.css" id="app-style" rel="stylesheet" type="text/css" />
+                @yield('css')
             </div>								
         </div>
     </div>
@@ -94,5 +109,61 @@
         <span class="swfa far fa-clock sw_icone_info_sistema"></span>
         <i class="bi bi-stopwatch"></i><span class="sw_texto_info_sistema">Portal atualizado em: <strong>09/05/2022 - 15:53</strong></span>        </footer> 
         <script> src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"</script>
+        <div class="info_sistema">
+
+
+
+        
+               {{-- <footer>
+                  
+                 <section class="bg-footer pt-5"> 
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="footer-item mt-4 mt-lg-0 me-lg-5 text-center"><img src="{{url('')}}/images/white.png" class="w-75 mt-5 mb-5" alt=""></div>
+                            </div>                           
+                            <div class="col-md-8">
+                                <div class="row  align-items-center h-100 text-white">
+                                    <div class="col-md-6 d-flex justify-content-start align-items-center">
+                                        <div class="d-flex align-items-center justify-content-center icon_info me-2"><i class="fa-solid fa-location-dot"></i></div>
+                                        <div class="e_txt_info"><span class="e_work_r">Av. Professor Carvalho Pinto, 207 <br>1º Andar - Centro - Caieiras</span></div>
+                                    </div>
+                                    <div class="col-md-6 d-flex justify-content-start align-items-center">
+                                        <div class="d-flex align-items-center justify-content-center icon_info me-2"><i class="fa-solid fa-comment-dots"></i></div>
+                                        <div class="e_txt_info">
+                                            <a href="tel:(16)2105-3000"><span class="text-white">(11) 4445-9179</span></a><br>
+                                            <a href="mailto:ouvidoria@sertaozinho.sp.gov.br" class="text-white"><span>pat@caieiras.sp.gov.br</span></a>     
+                                        </div>
+                                    </div>                                    
+                                    <div class="col-md-6  d-flex justify-content-start align-items-center">
+                                        <div class="d-flex align-items-center justify-content-center icon_info me-2"><i class="fa-solid fa-clock"></i></div>
+                                        <div class="e_txt_info">Atendimento de Seg a Sex das 8h às 14h  </div>
+                                    </div>
+                                    <div class="col-md-6 d-flex justify-content-start align-items-center">
+                                        <div class="d-flex align-items-center justify-content-center icon_info me-2"><i class="fa-solid fa-comment-dots"></i></div>
+                                        <div class="e_txt_info">
+                                            <a href="tel:(16)2105-3000"><span class="text-white">(11) 4445-9179</span></a><br>
+                                            <a href="mailto:ouvidoria@sertaozinho.sp.gov.br" class="text-white"><span>pat@caieiras.sp.gov.br</span></a>     
+                                        </div> --}}
+                                    </div>                                    
+                                </div>
+                            {{-- </div>                           
+                        </div>
+                    </div>  
+             --}}
+
+        @yield('modal')
+        
+        <!-- JAVASCRIPT -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="{{url('')}}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="{{url('')}}/plugins/sweetalert2/sweetalert2.min.js"></script> 
+        <script src="{{url('')}}/plugins/bootstrap/js/bs-stepper.min.js"></script>        
+        <script src="{{ url('') }}/plugins/jquery.mask.js"></script>
+        <script src="{{url('')}}/js/functions.js"></script>
+        <script src="{{url('')}}/js/acessibilidade.js"></script>
+        @yield('js')
+        @yield('jss')
     </body>
 </html>
+

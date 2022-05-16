@@ -43,6 +43,7 @@ class EventoController extends Controller
             // Image Upload
 
             if($request->hasFile('image') && $request->file('image')->isValid()) {
+
                 $requestImage = $request->image;
 
                 $extension = $requestImage->extension();
@@ -79,9 +80,54 @@ public function dashboard(){
 
      $user = auth()->user();
 
-     $evento = $user->evento;
+     $evento = $user->eventos;
 
      return view('evento.dashboard', ['evento' => $evento]);
+}
+public function destroy($id) {
+    Evento::findOrFail($id)->delete();
+
+    return redirect('/dashboard')->with('msg', 'Evento excluido com sucesso!');
+}
+
+public function edit($id) {
+
+    $evento = Evento::findOrFail($id);
+
+    return view('evento.edit', ['evento' => $evento]);
+}
+
+public function update(Request $request) {
+    $data = $request->all();
+    
+     // Image Upload
+
+     if($request->hasFile('image') && $request->file('image')->isValid()) {
+
+        $requestImage = $request->image;
+
+        $extension = $requestImage->extension();
+
+        $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+        $request->image->move(public_path('img/evento'), $imageName);
+
+        $data['image'] = $imageName;
+    }
+    Evento::findOrFail($request->id)->update($data);
+    
+    return redirect('/dashboard')->with('msg', 'Evento editado com sucesso!');
+}
+
+public function joinEvento($id) {
+
+    $user = auth()->user();
+
+    $user->eventosAsParticipant->attach($id);
+
+    $evento = Evento::findOrFail($id);
+
+    return redirect('/dashboard')->with('msg', 'Sua presença está confirmada no evento ' . $evento->title);
 }
 
 }

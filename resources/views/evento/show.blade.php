@@ -14,7 +14,17 @@
         <p class="evento-city"><i class="bi bi-geo-alt-fill"></i> {{ $evento->city }}</p>
         <p class="evento-participantes"><i class="bi bi-people-fill"></i> X Participantes</p>
         <p class="evento-owner"><i class="bi bi-star-fill"></i> {{ $eventoOwner['name'] }}</p>
-        <a href="#" class="btn btn-primary" id="evento-submit">Confirmar presença</a>
+        {{-- <a href="#" class="btn btn-primary" id="evento-submit">Confirmar presença</a> --}}
+        <form action="{{ url ('')}}/evento/join/{{ $evento->id }}" method="POST">
+            @csrf
+            <a href="{{ url ('')}}/evento/join/"
+             class="btn btn-primary" 
+             id="evento-submit"
+             onclick="evento.preventDefault();
+             this.closet('form').submit();">  
+             Confirmar presença
+            </a>
+        </form>
         <h3>O evento conta com:</h3>
         <ul id="items-list">
         @foreach ($evento->items as $item)

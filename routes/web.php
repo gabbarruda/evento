@@ -18,18 +18,15 @@ Route::get('/', [EventoController::class, 'index'])->name('home');
 Route::get('/evento/create', [EventoController::class, 'create'])->name('create')->middleware('auth');
 Route::get('/evento/{id}', [EventoController::class, 'show'])->name('show');
 Route::post('/evento', [EventoController::class, 'store'])->name('store');
+Route::delete('/evento/{id}', [EventoController::class, 'destroy'])->middleware('auth');
+Route::get('/evento/edit/{id}', [EventoController::class, 'edit'])->middleware('auth');
+Route::put('/evento/update/{id}', [EventoController::class, 'update'])->middleware('auth');
 
 Route::get('/contact', function () {
     return view('contact');
 });
 
 Route::get('/dashboard', [EventoController::class, 'dashboard'])->middleware('auth');
-// Route::middleware([
-//     'auth:sanctum',
-//     config('jetstream.auth_session'),
-//     'verified'
-// ])->group(function () {
-//     Route::get('/dashboard', function () {
-//         return view('dashboard');
-//     })->name('dashboard');
-// });
+
+Route::post('/evento/join/{id}', [EventoController::class, 'joinEvento'])->middleware('auth');
+

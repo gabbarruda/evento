@@ -2,10 +2,8 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <title>Evento</title>
-
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HDC Evento</title>
+        <head>
 
         <title>@yield('title')</title>
         <!-- Fonte do Google -->
@@ -22,10 +20,12 @@
 
         <link rel="stylesheet" href="{{url('')}}/css/styles.css">
         <script src="{{url('')}}/js/scripts.js"></script>
+        <link rel="stylesheet" type="text/css" href="{{url('')}}/plugins/sweetalert2/sweetalert2.min.css">
+
     </head>
     <body> 
            <!-- BUSCA / ACESSIBILIDADE -->
-           <div class="e_area_busca_acessibilidade">
+           <div class="text-center mt-2">
             <!-- ACESSIBILIDADE -->
             <div class="e_area_acessibilidade unselect">
                 <a class="aumentar"><div class="e_btn_acessibilidade e_lato_black" title="Aumentar textos do site"><i class="bi bi-zoom-in"></i></div>aumentar</a>
@@ -49,7 +49,7 @@
                 @yield('css')
             </div>								
         </div>
-    </div>
+
     
         
         
@@ -103,11 +103,11 @@
           </main>
        <footer>
         <div class="sw_info_sistema">
-            <i class="bi bi-wrench-adjustable"></i><span class="swfa fas fa-wrench sw_icone_info_sistema"></span>
+            <i class="bi bi-wrench-adjustable"></i>
             <span class="sw_texto_info_sistema">Versão do Sistema: <strong>3.2.2 - 02/05/2022</strong></span>
         </div>
         <span class="swfa far fa-clock sw_icone_info_sistema"></span>
-        <i class="bi bi-stopwatch"></i><span class="sw_texto_info_sistema">Portal atualizado em: <strong>09/05/2022 - 15:53</strong></span>        </footer> 
+        <i class=<span class="sw_texto_info_sistema">Portal atualizado em: <strong>09/05/2022 - 15:53</strong></span>        </footer> 
         <script> src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"</script>
         <div class="info_sistema">
 
@@ -166,4 +166,3 @@
         @yield('jss')
     </body>
 </html>
-

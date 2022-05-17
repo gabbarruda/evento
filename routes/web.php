@@ -26,7 +26,7 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/dashboard', [EventoController::class, 'dashboard'])->middleware('auth');
+Route::get('/dashboard', [EventoController::class, 'dashboard'])->name('dashboard')->middleware('auth');
 
-Route::post('/evento/join/{id}', [EventoController::class, 'joinEvento'])->middleware('auth');
+Route::post('/evento/join/{id}', [EventoController::class, 'joinEvento'])->name('joinEvento')->middleware('auth');
 

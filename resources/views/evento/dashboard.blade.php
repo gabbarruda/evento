@@ -8,7 +8,7 @@
     <h1>Meus eventos</h1>
 </div>
 <div class="col-md-10 offset-md-1 dashboard-eventos-container">
-    @if(count($evento) > 0)
+    @if(count($eventos) > 0)
   <table class="table">
       <thead>
           <tr>
@@ -19,12 +19,12 @@
           </tr>
       </thead>
   <tbody>
-      @foreach($evento as $evento)
+      @foreach($eventos as $evento)
           <tr>
               <td scropt="row">{{ $loop->index + 1 }}</td>
               <td><a href="{{ url('') }}/evento/{{ $evento->id }}">{{ $evento->title }}</a></td>
-              <td>0</td>
-              <td>
+              <td>{{ count($evento->users)}}</td>
+              <td class="d-flex">
                 <a href="{{ url('') }}/evento/edit/{{ $evento->id }}" class="btn btn-success edit-btn"><i class="fa-solid fa-file-pen"></i></a> 
                 <form action="{{ url('') }}/evento/{{ $evento->id }}" method="POST">
                 @csrf

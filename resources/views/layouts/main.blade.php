@@ -71,13 +71,14 @@
                 </li>
                 <form action="{{ url ('')}}/logout" method="POST">
                     @csrf
-                    <a href="/logout"
+                    <button 
                      class="nav-link" 
-                     onclick="event.preventDefault();
+                     onclick="eventos.preventDefault();
                      this.closet('form').submit();">
                      Sair
-                    </a>
+                    </button>
                 </form>
+            </li>
                 @endauth
                 @guest
             <li class="nav-item">
@@ -164,5 +165,15 @@
         <script src="{{url('')}}/js/acessibilidade.js"></script>
         @yield('js')
         @yield('jss')
+        <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
     </body>
 </html>

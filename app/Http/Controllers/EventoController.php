@@ -80,10 +80,16 @@ public function dashboard(){
 
      $user = auth()->user();
 
-     $evento = $user->eventos;
+     $eventos = $user->eventos;
 
-     return view('evento.dashboard', ['evento' => $evento]);
+     $eventosAsParticipant = $user->eventosAsParticipant;
+
+     return view('evento.dashboard',
+      ['eventos' => $eventos, 'eventosAsParticipant'=> $eventosAsParticipant]
+    );
+
 }
+
 public function destroy($id) {
     Evento::findOrFail($id)->delete();
 
@@ -123,7 +129,7 @@ public function joinEvento($id) {
 
     $user = auth()->user();
 
-    $user->eventosAsParticipant->attach($id);
+    $user->eventoSAsParticipant()->attach($id);
 
     $evento = Evento::findOrFail($id);
 

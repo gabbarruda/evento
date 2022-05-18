@@ -97,8 +97,14 @@ public function destroy($id) {
 }
 
 public function edit($id) {
+    
+    $user = auth()->user();
 
     $evento = Evento::findOrFail($id);
+
+    if($user->id != $evento->user->id) {
+        return redirect('/dashboard');
+    }
 
     return view('evento.edit', ['evento' => $evento]);
 }
@@ -129,7 +135,7 @@ public function joinEvento($id) {
 
     $user = auth()->user();
 
-    $user->eventoSAsParticipant()->attach($id);
+    $user->eventosAsParticipant()->attach($id);
 
     $evento = Evento::findOrFail($id);
 

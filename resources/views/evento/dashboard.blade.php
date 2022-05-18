@@ -58,10 +58,17 @@
             @foreach($eventosAsParticipant as $evento)
                 <tr>
                     <td scropt="row">{{ $loop->index + 1 }}</td>
-                    <td><a href="{{ url('') }}/evento/{{ $evento->id }}">{{ $evento->title }}</a></td>
+                    <td><a href="/evento/{{ $evento->id }}">{{ $evento->title }}</a></td>
                     <td>{{ count($evento->users)}}</td>
                     <td>
-                        <a href="{{ url('') }}/evento/create">Sair do evento</a>
+                        <form action="{{ url('') }}/evento/leave/{{ $evento->id }}" method="POST">
+                                @csrf
+                                @method("DELETE")
+                                <button type="submit" class="btn btn-danger delete-btn">
+                                    <i class="bi bi-trash"></i>Sair do evento
+                                </button>
+                        </form>
+                        
                     </td>
                   </td>
                 </tr>
@@ -69,7 +76,7 @@
         </tbody>
       </table>
         @else 
-        <p>Você ainda não está participando de nenhum evento, <a href="/">veja todos os eventos</a>
+        <p>Você ainda não está participando de nenhum evento, <a href="{{ url('') }}/">veja todos os eventos</a>
             @endif
     </div>
     @endsection

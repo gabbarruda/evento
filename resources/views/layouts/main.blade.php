@@ -105,10 +105,13 @@
        <footer>
         <div class="sw_info_sistema">
             <i class="bi bi-wrench-adjustable"></i>
-            <span class="sw_texto_info_sistema">Versão do Sistema: <strong>3.2.2 - 02/05/2022</strong></span>
+            <span class="sw_texto_info_sistema">Versão do Sistema: <strong>3.2.2 </strong></span>
         </div>
         <span class="swfa far fa-clock sw_icone_info_sistema"></span>
-        <i class=<span class="sw_texto_info_sistema">Portal atualizado em: <strong>09/05/2022 - 15:53</strong></span>        </footer> 
+        <i class="#"></i><span class="sw_texto_info_sistema">Portal atualizado em: <strong>09/05/2022 - 15:53</strong>
+        </span> 
+   
+           </footer> 
         <script> src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"</script>
         <div class="info_sistema">
 

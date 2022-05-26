@@ -62,13 +62,19 @@
                 <li class="nav-item">
                     <a href="{{ url('') }}/" class="nav-link">Eventos</a>
                 </li>
+                @auth                   
+               
+                @if (Auth::user()->role=='A')
                 <li class="nav-item">
                     <a href="{{ route ('create')}}" class="nav-link">Criar Eventos</a>
                 </li>
+                @endif
+                @endauth
                 @auth    
                 <li class="nav-item">
                     <a href="{{ url ('')}}/login" class="nav-link">Meus eventos</a>
                 </li>
+                
                 <form action="{{ url ('')}}/logout" method="POST">
                     @csrf
                     <button 

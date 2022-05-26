@@ -22,12 +22,23 @@
              id="evento-submit"
              onclick="evento.preventDefault();
              this.closet('form').submit();">  
-             Confirmar presença
+             Confirmar presença!
             </button>
+            
         </form>
             @else
-                 <p class="already-joined-msg">Você já está participando deste evento!</p>
+                 <p class="already-joined-msg">Você já está participando deste evento!</p> 
+                 <form action="{{ url('') }}/evento/leave/{{ $evento->id }}" method="POST">
+                    @csrf
+                    
+                    @method("DELETE")
+                    <button type="submit" class="btn btn-secondary delete-btn">
+                      <i class="fa-solid fa-person-walking-arrow-right"></i>Sair do evento!
+                    </button>
+            </form>
+
             @endif
+           
         <h3>O evento conta com:</h3>
         <ul id="items-list">
         @foreach ($evento->items as $item)

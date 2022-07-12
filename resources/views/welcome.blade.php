@@ -6,15 +6,15 @@
 
     <div id="search-container" class="col-md-12">
         <h1>Busque um evento</h1>
-        <form action="/" method="GET">
+        <form action="{{ url ('')}}/" method="GET">
             <input type="text" id="search" name="search" class="form-control" placeholder="Procurar..."> 
         </form>
     </div>
     <div id="eventos-contrainer" class="col-md-12">
         <br>
-        <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success bg-success bg-opacity-10 border border-success border-opacity-10 rounded-2"><h2>Eventos da semana</h2></small>
-        {{-- <div class="p-3 mb-3"><h2>Eventos da semana <i class="fa-solid fa-angles-down"></i></h2></div> --}}
-        {{-- <p class="subtitle">Veja os Eventos dos próximos dias</p> --}}
+     {{-- <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success bg-success bg-opacity-10 border border-success border-opacity-10 rounded-2"><h2>Eventos da semana</h2></small> --}}
+       <div class="p-3 mb-3"><h2>Eventos da semana <i class="fa-solid fa-angles-down"></i></h2></div>
+      <p class="subtitle">Veja os Eventos dos próximos dias</p> 
         <div id="cards-container" class="row">
             @foreach ($eventos as $evento)
                 <div class="card col-md-3">
@@ -39,10 +39,8 @@
     </div>
     <div id="eventos-contrainer" class="col-md-12">
         <br>
-        <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success bg-success bg-opacity-10 border border-success border-opacity-10 rounded-2"><h2>Eventos da semana</h2></small>
-
+        <div class="p-3 mb-3"><h2>Lançamentos das próximas semanas <i class="fa-solid fa-angles-down"></i></h2></div>
         {{-- <div class="p-3 mb-3"><h2>Lançamentos dos próximos dias  <i class="fa-solid fa-angles-down"></i></h2></div> --}}
-        
            <p class="subtitle">Veja os eventos das próximas semanas</p>
            <div id="cards-container" class="row">
                @foreach ($eventos as $evento)

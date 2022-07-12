@@ -48,8 +48,8 @@
     </div>
 
     @endif
-    <div class="col-md-10 offset-md-1 dashboard-title-container">
-        <h1>Eventos que estou participando</h1>
+    <div class="col-md-10 offset-md-1 alert alert-warning" role="alert">
+        <h1>Eventos que estou participando!</h1>
     </div>
     <div class="col-md-10 offset-md-1 dashboard-eventos-container">
         @if (count($eventosAsParticipant) > 0):
@@ -57,7 +57,7 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Nome</th>
+                        <th scope="col">Nome do evento</th>
                         <th scope="col">Participantes</th>
                         <th acope="col">Ações</th>
                     </tr>
@@ -86,7 +86,7 @@
                 </tbody>
             </table>
         @else
-            <p>Você ainda não está participando de nenhum evento, <a href="{{ url('') }}/">veja todos os eventos</a>
+            <p>Você ainda não está participando de nenhum evento. <a href="{{ url('') }}/">Veja todos os eventos.</a>
         @endif
     </div>
 @endsection

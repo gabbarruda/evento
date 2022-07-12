@@ -32,7 +32,11 @@
                     @csrf
                     
                     @method("DELETE")
-                    <button type="submit" class="btn btn-secondary delete-btn">
+                    {{-- <button  type="submit" class="alert alert-primary" role="alert>
+                        <i class="fa-solid fa-person-walking-arrow-right"></i></i>Sair do evento!
+                    </button> --}}
+                      
+                    <button type="submit" class="alert alert-warning" role="alert">
                       <i class="fa-solid fa-person-walking-arrow-right"></i>Sair do evento!
                     </button>
             </form>

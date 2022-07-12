@@ -79,11 +79,11 @@
 }
 
 .step-active .step-circle::before {
-    color: #007bff
+    color: #ffffff
 }
 
 .step-active .step-text {
-    color: #007bff
+    color: #ffffff
 }
 
 

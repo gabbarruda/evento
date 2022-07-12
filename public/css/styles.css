@@ -11,8 +11,8 @@
         }
         
         header {
-            background-color: #FFF;
-            border-bottom: 1px solid #CCC;
+            background-color: #000000;
+            border-bottom: 1px solid #000000;
         }
         
         .row {
@@ -45,8 +45,8 @@
         
         #info-container .already-joined-msg {
             margin: 15px 0;
-            color: #004085;
-            background-color: #CCE5FF;
+            color: #ffffff;
+            background-color: #020202;
             border: 1 px solid #B8DAFF;
             padding: 10px;
             width: 275px;
@@ -234,7 +234,7 @@
         
         footer {
             text-align: center;
-            background-color: #353E48;
+            background-color: #000000;
             color: #FFF;
             padding: 30px;
             position: absolute;
@@ -305,4 +305,10 @@
         .e_area_acessibilidade .e_btn_acessibilidade:hover {
             color: #fff;
             cursor: pointer;
+        }
+        
+        .nav-item {}
+        
+        .nav-link {
+            color: #fff
         }

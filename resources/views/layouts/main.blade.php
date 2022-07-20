@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <title>HDC Evento</title>
+        <title>Receita</title>
         <head>
             <link rel="shortcut icon" href="{{url('')}}/img/evento/icons.png">
         <title>@yield('title')</title>
@@ -65,13 +65,13 @@
                
                 @if (Auth::user()->role=='A')
                 <li class="nav-item">
-                    <a href="{{ route ('create')}}" class="nav-link">Criar Eventos</a>
+                    <a href="{{ route ('create')}}" class="nav-link">Criar Receitas</a>
                 </li>
                 @endif
                 @endauth
                 @auth    
                 <li class="nav-item">
-                    <a href="{{ url ('')}}/login" class="nav-link">Meus eventos</a>
+                    <a href="{{ url ('')}}/login" class="nav-link">Minhas receitas</a>
                 </li>
                 
                 <form action="{{ url ('')}}/logout" method="POST">

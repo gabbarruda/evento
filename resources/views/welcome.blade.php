@@ -4,16 +4,35 @@
 
 @section('content')
 
-    <div id="search-container" class="col-md-12">
-        <h1>Busque um evento</h1>
-        <form action="{{ url ('')}}/" method="GET">
-            <input type="text" id="search" name="search" class="form-control" placeholder="Procurar..."> 
-        </form>
+    <div id="search-container" class="carousel slide col-md-12" data-bs-touch="false">
+      <h1>Busque um evento</h1>
+      <form action="{{ url('') }}/" method="GET">
+          <input type="text" id="search" name="search" class="form-control" placeholder="Procurar..."> 
+      </form>
+      <div class="carousel-inner">
+        <div class="carousel-caption d-none d-md-block ">
+          <img src="{{ url('') }}/img" class="d-block w-100" alt="">
+        </div>
+        <div class="carousel-item">
+          <img src="{{ url('') }}/" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{{ url('') }}/" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
+
     <div id="eventos-contrainer" class="col-md-12">
         <br>
-     {{-- <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success bg-success bg-opacity-10 border border-success border-opacity-10 rounded-2"><h2>Eventos da semana</h2></small> --}}
-       <div class="p-3 mb-3"><h2>Eventos da semana <i class="fa-solid fa-angles-down"></i></h2></div>
+       <div class="p-3 mb-3"><h2>Eventos da semana</h2></div>
       <p class="subtitle">Veja os Eventos dos próximos dias</p> 
         <div id="cards-container" class="row">
             @foreach ($eventos as $evento)
@@ -27,7 +46,6 @@
                         <h5 class="card-title">{{ $evento->title }}</h5>
                         <p class="card-participantes">{{ count($evento->users) }} Participantes</p>
                         <a href="{{route('show', ['id'=>$evento->id])}}" class="btn btn-primary">Saber mais</a>
-                        {{-- <a href="/evento/{{ $evento->id }}" class="btn btn-primary">Saber mais</a> --}}
                     </div>
                 </div>
             @endforeach
@@ -39,13 +57,11 @@
     </div>
     <div id="eventos-contrainer" class="col-md-12">
         <br>
-        <div class="p-3 mb-3"><h2>Lançamentos das próximas semanas <i class="fa-solid fa-angles-down"></i></h2></div>
-        {{-- <div class="p-3 mb-3"><h2>Lançamentos dos próximos dias  <i class="fa-solid fa-angles-down"></i></h2></div> --}}
-           <p class="subtitle">Veja os eventos das próximas semanas</p>
-           <div id="cards-container" class="row">
-               @foreach ($eventos as $evento)
-                   <div class="card col-md-3">
-                       {{-- <img src="/img/event.jpg" alt="{{ $evento->title }}"> --}}
+        {{-- <div class="p-3 mb-3"><h2>Lançamentos das próximas semanas </h2></div>
+           <p class="subtitle">Veja os eventos das próximas semanas</p> --}}
+          <div id="cards-container" class="row">
+               @foreach ($eventos as $evento) 
+                   {{-- <div class="card col-md-3">
                        <img src="{{ url('') }}/img/evento/{{ $evento->image }} "alt="{{ $evento->title }}">
    
    
@@ -54,9 +70,8 @@
                            <h5 class="card-title">{{ $evento->title }}</h5>
                            <p class="card-participantes">{{ count($evento->users) }} Participantes</p>
                            <a href="{{route('show', ['id'=>$evento->id])}}" class="btn btn-primary">Saber mais</a>
-                           {{-- <a href="/evento/{{ $evento->id }}" class="btn btn-primary">Saber mais</a> --}}
                        </div>
-                   </div>
+                   </div> --}}
                @endforeach
                @if(count($eventos) == 0)
                <p>Não há eventos disponiveis</p>

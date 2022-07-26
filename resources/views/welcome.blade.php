@@ -3,32 +3,38 @@
 @section('title', 'HDC Evento')
 
 @section('content')
-
-    <div id="search-container" class="carousel slide col-md-12" data-bs-touch="false">
-      <h1>Busque um evento</h1>
-      <form action="{{ url('') }}/" method="GET">
-          <input type="text" id="search" name="search" class="form-control" placeholder="Procurar..."> 
-      </form>
+<div class="box-search">
+ 
+    <div id="search-container" class="carousel slide" data-bs-ride="carousel">
+      
       <div class="carousel-inner">
-        <div class="carousel-caption d-none d-md-block ">
-          <img src="{{ url('') }}/img" class="d-block w-100" alt="">
+        <div class="carousel-item active">
+          <img src="{{ url('') }}/img/codig.jpg"  class="d-block w-100" alt="..."> 
         </div>
         <div class="carousel-item">
-          <img src="{{ url('') }}/" class="d-block w-100" alt="...">
+          <img src="{{ url('') }}/img/event.jpg"  class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="{{ url('') }}/" class="d-block w-100" alt="...">
+          <img src="..." class="d-block w-100" alt="...">
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+    <div class="search"><h1>Busque um evento</h1>
+      <form action="{{ url('') }}/" method="GET">
+          <input type="text" id="search" name="search" class="form-control" placeholder="Procurar..."> 
+      </form></div>
+</div>
+
+    
+
 
     <div id="eventos-contrainer" class="col-md-12">
         <br>

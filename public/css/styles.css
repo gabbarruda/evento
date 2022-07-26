@@ -74,12 +74,13 @@
     /* Search Container */
     
     #search-container {
-        background-image: url("../img/teatro.jpg");
+        background-image: url("../img/teatro.jpgg");
         background-size: cover;
         background-position: center;
         height: 400px;
         padding: 50px;
         text-align: center;
+        position: relative;
     }
     
     #carousel {
@@ -323,10 +324,20 @@
     }
     
     .search-container .carousel-inner {
-        background-image: url("../img/codig.jpg");
+        background-image: url("../img/evento/codig.jpg");
         background-size: cover;
         background-position: center;
         height: 400px;
         padding: 50px;
         text-align: center;
+    }
+    
+    .box-search {
+        position: relative;
+    }
+    
+    .box-search .search {
+        position: absolute;
+        width: 50%;
+        margin: 0 auto;
     }

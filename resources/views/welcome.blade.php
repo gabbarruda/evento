@@ -13,13 +13,13 @@
   
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="{{ url('') }}/img/codig.jpg"  class="d-block w-100" alt="..."> 
+          <img src="{{ url('') }}/img/codig.jpg"  class="d-block w-100" alt="imagem 1"> 
         </div>
         <div class="carousel-item">
-          <img src="{{ url('') }}/img/event.jpg"  class="d-block w-100" alt="...">
+          <img src="{{ url('') }}/img/teatro.jpg"  class="d-block w-100" alt="imagem 2">
         </div>
         <div class="carousel-item">
-          <img src="{{ url('') }}/img/codig.jpg" class="d-block w-100" alt="...">
+          <img src="{{ url('') }}/img/php.png" class="d-block w-100" alt="imagem 3">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

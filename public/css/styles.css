@@ -341,3 +341,12 @@
         width: 50%;
         margin: 0 auto;
     }
+    
+    .carousel-item {
+        height: 400px;
+    }
+    
+    .carousel-item img {
+        object-fit: cover;
+        height: 100%;
+    }

@@ -3,34 +3,62 @@
 @section('title', 'HDC Evento')
 
 @section('content')
-<div class="box-search">
-    <div id="search-container" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="{{ url('') }}/img/teatro.jpg"  class="d-block w-100" alt=""> 
-        </div>
-        <div class="carousel-item">
-          <img src="{{ url('') }}/img/codig.jpg"  class="d-block w-100" alt="">
-        </div>
-        <div class="carousel-item">
-          <img src="{{ url('') }}/img/teatro.jpg" class="d-block w-100" alt="">
-        </div>
-        <div class="search"><h1>Busque um evento</h1>
-          <form action="{{ url('') }}" method="GET">
-              <input type="text" id="search" name="search" class="form-control" placeholder="Procurar..."> 
-          </form></div>
+<div class="box">
+
+  <div class="box_search d-flex align-items-center">
+      <div class="search my-auto text-center">
+          <div class="search-bar tex-center w-100">
+            <h1>Busque um evento</h1>
+            <form action="{{ url('') }}" method="GET">
+                <input type="text" id="search" name="search" class="form-control" placeholder="Procurar..."> 
+            </form>
+          </div>
       </div>
-      {{-- {{-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button> 
-      {{-- <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button> 
-    </div> --}}
-  
+  </div>
+
+  <!-- Carousel wrapper -->
+  <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+          <li data-mdb-target="#introCarousel" data-mdb-slide-to="0" class="active"></li>
+          <li data-mdb-target="#introCarousel" data-mdb-slide-to="1"></li>
+          <li data-mdb-target="#introCarousel" data-mdb-slide-to="2"></li>
+      </ol>
+
+      <!-- Inner -->
+      <div class="carousel-inner">
+          <!-- Single item -->
+          <div class="carousel-item active">
+              <div class="mask"> </div>
+          </div>
+
+          <!-- Single item -->
+          <div class="carousel-item">
+              <div class="mask">
+              </div>
+          </div>
+
+          <!-- Single item -->
+          <div class="carousel-item">
+              <div class="mask">
+              </div>
+          </div>
+      </div>
+      <!-- Inner -->
+
+      <!-- Controls -->
+      <a class="carousel-control-prev" href="#introCarousel" role="button" data-mdb-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#introCarousel" role="button" data-mdb-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+      </a>
+  </div>
+  <!-- Carousel wrapper -->
 </div>
+
 
     
 

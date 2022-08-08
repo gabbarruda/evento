@@ -322,31 +322,69 @@
     .nav-link {
         color: #F2A340
     }
+    /* Carousel styling */
     
-    .search-container .carousel-inner {
-        background-image: url("../img/evento/codig.jpg");
+    #introCarousel,
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item.active {
+        height: 100vh;
+    }
+    
+    .carousel-item:nth-child(1) {
+        background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+        background-repeat: no-repeat;
         background-size: cover;
-        background-position: center;
-        height: 400px;
-        padding: 50px;
+        background-position: center center;
+    }
+    
+    .carousel-item:nth-child(2) {
+        background-image: url('https://mdbootstrap.com/img/Photos/Others/images/77.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    .carousel-item:nth-child(3) {
+        background-image: url('https://mdbootstrap.com/img/Photos/Others/images/78.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    /* Height for devices larger than 576px */
+    
+    @media (min-width: 992px) {
+        #introCarousel {
+            margin-top: -58.59px;
+        }
+    }
+    
+    .navbar .nav-link {
+        color: #fff !important;
+    }
+    
+    .box {
+        position: relative;
         text-align: center;
     }
     
-    .box-search {
-        position: relative;
-    }
-    
-    .box-search .search {
-        position: absolute;
-        width: 50%;
+    .box_search {
+        width: 80%;
         margin: 0 auto;
+        height: 100%;
     }
     
-    .carousel-item {
-        height: 400px;
+    .box .search {
+        position: absolute;
+        width: 80%;
+        z-index: 1999;
+        margin: 0 auto;
+        bottom: 0;
+        top: 0;
+        height: 80px;
     }
     
-    .carousel-item img {
-        object-fit: cover;
-        height: 200%;
+     ::selection {
+        background-color: #d0021b;
+        color: #fff
     }

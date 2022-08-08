@@ -29,7 +29,7 @@
 
 <body>
     
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom fixed-top">
         <a href="{{ url('') }}/"
             class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
@@ -43,6 +43,9 @@
         <ul class="nav nav-pills">
             <li class="nav-item">
                 <a href="{{ url('') }}/" class="nav-link">Eventos</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url('') }}/contato" class="nav-link">Contato</a>
             </li>
             @auth
 
@@ -68,6 +71,7 @@
                 </li>
             @endauth
             @guest
+        
                 <li class="nav-item">
                     <a href="{{ url('') }}/login" class="nav-link">Entrar</a>
                 </li>
@@ -102,14 +106,12 @@
     </div>
     </header>
     <main>
-        <div class="container-fluid">
-            <div class="row">
+
                 @if (session('msg'))
                     <p class="msg">{{ session('msg') }}</p>
                 @endif
                 @yield('content')
-            </div>
-        </div>
+         
     </main>
     <footer>
         <div class="sw_info_sistema">

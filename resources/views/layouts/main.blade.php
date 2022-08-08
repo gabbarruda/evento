@@ -28,7 +28,7 @@
     </head>
 
 <body>
-    
+
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom fixed-top">
         <a href="{{ url('') }}/"
             class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
@@ -71,7 +71,7 @@
                 </li>
             @endauth
             @guest
-        
+
                 <li class="nav-item">
                     <a href="{{ url('') }}/login" class="nav-link">Entrar</a>
                 </li>
@@ -83,35 +83,35 @@
         </div>
         </nav>
         <!-- BUSCA / ACESSIBILIDADE -->
-    <div class="text-center mt-2">
-        <!-- ACESSIBILIDADE -->
-        <div class="e_area_acessibilidade unselect">
-            <a class="aumentar">
-                <div class="e_btn_acessibilidade e_lato_black" title="Aumentar textos do site"><i
-                        class="bi bi-zoom-in"></i></div>aumentar
-            </a>
-            <a class="diminuir">
-                <div class="e_btn_acessibilidade e_lato_black" title="Diminuir textos do site"><i
-                        class="bi bi-zoom-out"></i></div>>diminuir
-            </a>
-            <a id="contraste" accesskey="5">
-                <div class="e_btn_acessibilidade" title="Aumentar/diminuir contraste"><span class="fa fa-adjust"
-                        aria-hidden="true"></span><span class="e_trans"></div>contraste
-            </a>
-            {{-- <a href="/portal/mapa"><div class="e_btn_acessibilidade" title="Ir para o mapa do site"><span class="fa fa-map-marker" aria-hidden="true"></span><span class="e_trans"><i class="bi bi-geo-alt"></i></span></div></a>
+        <div class="text-center mt-2">
+            <!-- ACESSIBILIDADE -->
+            <div class="e_area_acessibilidade unselect">
+                <a class="aumentar">
+                    <div class="e_btn_acessibilidade e_lato_black" title="Aumentar textos do site"><i
+                            class="bi bi-zoom-in"></i></div>aumentar
+                </a>
+                <a class="diminuir">
+                    <div class="e_btn_acessibilidade e_lato_black" title="Diminuir textos do site"><i
+                            class="bi bi-zoom-out"></i></div>>diminuir
+                </a>
+                <a id="contraste" accesskey="5">
+                    <div class="e_btn_acessibilidade" title="Aumentar/diminuir contraste"><span class="fa fa-adjust"
+                            aria-hidden="true"></span><span class="e_trans"></div>contraste
+                </a>
+                {{-- <a href="/portal/mapa"><div class="e_btn_acessibilidade" title="Ir para o mapa do site"><span class="fa fa-map-marker" aria-hidden="true"></span><span class="e_trans"><i class="bi bi-geo-alt"></i></span></div></a>
                 <a href="/portal/acessibilidade" accesskey="6"><div class="e_btn_acessibilidade" title="Ir para a página de acessibilidade"><span class="fa fa-wheelchair" aria-hidden="true"></span><span class="e_trans">acessibilidade</span></div></a> --}}
 
-            @yield('css')
+                @yield('css')
+            </div>
         </div>
-    </div>
     </header>
     <main>
 
-                @if (session('msg'))
-                    <p class="msg">{{ session('msg') }}</p>
-                @endif
-                @yield('content')
-         
+        @if (session('msg'))
+            <p class="msg">{{ session('msg') }}</p>
+        @endif
+        @yield('content')
+
     </main>
     <footer>
         <div class="sw_info_sistema">

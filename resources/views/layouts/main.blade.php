@@ -27,7 +27,7 @@
 
     </head>
 
-<body>
+<body class="sm:w-1/2 mb-10 px-4" >
 
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom fixed-top">
         <a href="{{ url('') }}/"
@@ -98,9 +98,7 @@
                     <div class="e_btn_acessibilidade" title="Aumentar/diminuir contraste"><span class="fa fa-adjust"
                             aria-hidden="true"></span><span class="e_trans"></div>contraste
                 </a>
-                {{-- <a href="/portal/mapa"><div class="e_btn_acessibilidade" title="Ir para o mapa do site"><span class="fa fa-map-marker" aria-hidden="true"></span><span class="e_trans"><i class="bi bi-geo-alt"></i></span></div></a>
-                <a href="/portal/acessibilidade" accesskey="6"><div class="e_btn_acessibilidade" title="Ir para a página de acessibilidade"><span class="fa fa-wheelchair" aria-hidden="true"></span><span class="e_trans">acessibilidade</span></div></a> --}}
-
+            
                 @yield('css')
             </div>
         </div>

@@ -43,13 +43,13 @@
     </div>
     <div class="col-12 text-center">
         <br>
-        <div class="p-3 mb-3">
-            <h3 class="display-1 mb-2">Eventos da semana</h3>
+        <div class="p-2 mb-2">
+            <h3 class="display-6 mb-2">Eventos da semana</h3>
         </div>
         <p class="subtitle">Veja os Eventos dos próximos dias</p>
         <div id="cards-container" class="row">
             @foreach ($eventos as $evento)
-                <div class=" col-md-3 mb-3">
+                <div class=" col-md-2 mb-2">
                     <div class= "card ">
                     <img src="{{ url('') }}/img/evento/{{ $evento->image }} "alt="{{ $evento->title }}">
 

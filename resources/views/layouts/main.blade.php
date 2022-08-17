@@ -27,7 +27,7 @@
 
     </head>
 
-<body class="sm:w-1/2 mb-10 px-4" >
+<body class="sm:w-1/2 mb-10 px-7display-6 mb-1" >
 
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom fixed-top">
         <a href="{{ url('') }}/"
@@ -44,9 +44,7 @@
             <li class="nav-item">
                 <a href="{{ url('') }}/" class="nav-link">Eventos</a>
             </li>
-            <li class="nav-item">
-                <a href="{{ url('') }}/contato" class="nav-link">Contato</a>
-            </li>
+           
             @auth
 
                 @if (Auth::user()->role == 'A')

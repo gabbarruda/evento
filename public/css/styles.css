@@ -374,16 +374,6 @@
         height: 100%;
     }
     
-    .box .search {
-        position: absolute;
-        width: 80%;
-        z-index: 1999;
-        margin: 0 auto;
-        bottom: 0;
-        top: 0;
-        height: 80px;
-    }
-    
      ::selection {
         background-color: #d0021b;
         color: #fff
@@ -435,19 +425,16 @@
     }
     
     .box_search {
-        width: 80%;
         margin: 0 auto;
         height: 100%;
     }
     
     .box .search {
         position: absolute;
-        width: 80%;
         z-index: 1999;
         margin: 0 auto;
         bottom: 0;
-        top: 0;
-        height: 80px;
+        height: 100%;
     }
     
      ::selection {

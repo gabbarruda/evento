@@ -4,9 +4,9 @@
 
 @section('content')
     <div class="box">
-
         <div class="box_search d-flex align-items-center">
             <div class="search my-auto text-center">
+                
                 <div class="search-bar tex-center w-100">
                     <h1>Busque um evento</h1>
                     <form action="{{ url('') }}" method="GET">
@@ -43,31 +43,34 @@
     </div>
     <div class="col-12 text-center">
         <br>
-        <div class="p-2 mb-2">
+        <div class="p-6 mb-3">
             <h3 class="display-6 mb-2">Eventos da semana</h3>
         </div>
         <p class="subtitle">Veja os Eventos dos próximos dias</p>
-        <div id="cards-container" class="row">
-            @foreach ($eventos as $evento)
-                <div class=" col-md-2 mb-2">
-                    <div class= "card ">
-                    <img src="{{ url('') }}/img/evento/{{ $evento->image }} "alt="{{ $evento->title }}">
-
-
-                    <div class="card-body">
-                        <p class="card-date">{{ date('d/m/Y', strtotime($evento->date)) }}</p>
-                        <h5 class="card-title">{{ $evento->title }}</h5>
-                        <p class="card-participantes">{{ count($evento->users) }} Participantes</p>
-                        <a href="{{ route('show', ['id' => $evento->id]) }}" class="btn btn-primary">Saber mais</a>
+        <div class="container">
+            <div id="cards-container " class="row">
+                @foreach ($eventos as $evento)
+                    <div class=" col-md-6 col-lg-3 mb-2 ">
+                        <div class= "card ">
+                        <img src="{{ url('') }}/img/evento/{{ $evento->image }} "alt="{{ $evento->title }}">
+    
+    
+                        <div class="card-body">
+                            <p class="card-date">{{ date('d/m/Y', strtotime($evento->date)) }}</p>
+                            <h5 class="card-title">{{ $evento->title }}</h5>
+                            <p class="card-participantes">{{ count($evento->users) }} Participantes</p>
+                            <a href="{{ route('show', ['id' => $evento->id]) }}" class="btn btn-primary">Saber mais</a>
+                        </div>
                     </div>
-                </div>
-                </div>
-            @endforeach
-            @if (count($eventos) == 0)
-                <p>Não há eventos disponiveis</p>
-            @endif
-
+                    </div>
+                @endforeach
+                @if (count($eventos) == 0)
+                    <p>Não há eventos disponiveis</p>
+                @endif
+    
+            </div>
         </div>
+       
     </div>
    
 @endsection

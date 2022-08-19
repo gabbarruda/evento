@@ -362,22 +362,6 @@
     .navbar .nav-link {
         color: #fff !important;
     }
-    
-    .box {
-        position: relative;
-        text-align: center;
-    }
-    
-    .box_search {
-        width: 80%;
-        margin: 0 auto;
-        height: 100%;
-    }
-    
-     ::selection {
-        background-color: #d0021b;
-        color: #fff
-    }
     /* Carousel styling */
     
     #introCarousel,
@@ -425,16 +409,18 @@
     }
     
     .box_search {
-        margin: 0 auto;
-        height: 100%;
-    }
-    
-    .box .search {
         position: absolute;
         z-index: 1999;
         margin: 0 auto;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .box .search {
+        margin: 0 auto;
         bottom: 0;
         height: 100%;
+        width: 100%;
     }
     
      ::selection {

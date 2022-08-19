@@ -6,7 +6,7 @@
 
 <div class="col-md-10 offset-md-1">
 <div class="row">
-    <div id="image-container" class="col-md-6">
+    <div id="image-container" class="col-md-6 col-lg-3 mb-2">
         <img src="{{url('img/evento/')}}/{{ $evento->image }}" width="500" height= "400" class="img-fluid" alt="{{ $evento->title }}">
     </div>
         <div id="info-container" class="col-md-6">
@@ -32,9 +32,9 @@
                     @csrf
                     
                     @method("DELETE")
-                    {{-- <button  type="submit" class="alert alert-primary" role="alert>
+                     <button  type="submit" class="alert alert-primary" role="alert>
                         <i class="fa-solid fa-person-walking-arrow-right"></i></i>Sair do evento!
-                    </button> --}}
+                    </button> 
                       
                     <button type="submit" class="alert alert-warning" role="alert">
                       <i class="fa-solid fa-person-walking-arrow-right"></i>Sair do evento!

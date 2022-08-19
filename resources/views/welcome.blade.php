@@ -5,15 +5,20 @@
 @section('content')
     <div class="box">
         <div class="box_search d-flex align-items-center">
-            <div class="search my-auto text-center">
-                
-                <div class="search-bar tex-center w-100">
-                    <h1>Busque um evento</h1>
-                    <form action="{{ url('') }}" method="GET">
-                        <input type="text" id="search" name="search" class="form-control" placeholder="Procurar...">
-                    </form>
+            <div class="container">
+                <div class="search my-auto text-center">
+                    <div class="d-flex justify-content-center">
+                        <div class="search-bar tex-center w-100">
+                            <h1>Busque um evento</h1>
+                            <form action="{{ url('') }}" method="GET">
+                                <input type="text" id="search" name="search" class="form-control" placeholder="Procurar...">
+                            </form>
+                        </div>
+                    </div>
+                  
                 </div>
             </div>
+          
         </div>
 
         <div id="carouselExampleControls" class="carousel slide carousel-fade shadow-2-strong" data-bs-ride="carousel">
@@ -51,7 +56,7 @@
             <div id="cards-container " class="row">
                 @foreach ($eventos as $evento)
                     <div class=" col-md-6 col-lg-3 mb-2 ">
-                        <div class= "card ">
+                        <div class= "card mb-2">
                         <img src="{{ url('') }}/img/evento/{{ $evento->image }} "alt="{{ $evento->title }}">
     
     

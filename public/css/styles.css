@@ -427,3 +427,7 @@
         background-color: #d0021b;
         color: #fff
     }
+    
+    .header {
+        z-index: 2000;
+    }

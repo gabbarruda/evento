@@ -27,11 +27,10 @@
 
     </head>
 
-<body class="sm:w-1/2 mb-10 px-7display-6 mb-1">
+<body class="sm:w-1/2 mb-10 px-7display-6 ">
 
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom fixed-top header">
-        <a href="{{ url('') }}/"
-            class="d-flex align-items-center mb-3 mb-md-0  text-white ">
+        <a href="{{ url('') }}/" class="d-flex align-items-center mb-3 mb-md-0  text-white ">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
                 stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img"
                 viewBox="0 0 24 24">
@@ -123,18 +122,17 @@
     <script>
         src = "https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"
     </script>
-    <div class="info_sistema">
-
-
         @yield('modal')
-
         <!-- JAVASCRIPT -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
         </script>
         <script src="{{ url('') }}/js/acessibilidade.js"></script>
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
         @yield('js')
         @yield('jss')
         <div vw class="enabled">
@@ -147,6 +145,7 @@
         <script>
             new window.VLibras.Widget('https://vlibras.gov.br/app');
         </script>
+    
 </body>
 
 </html>

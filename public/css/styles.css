@@ -45,9 +45,9 @@
     
     #info-container .already-joined-msg {
         margin: 15px 0;
-        color: #020202;
+        color: #ffffff;
         background-color: #020202;
-        border: 1 px solid #020202;
+        border: 1 px solid #000000;
         padding: 10px;
         width: 275px;
     }
@@ -430,4 +430,13 @@
     
     .header {
         z-index: 2000;
+    }
+    
+    .box .carousel-control-next,
+    .box .carousel-control-prev {
+        z-index: 2000;
+    }
+    
+    main {
+        margin-top: 73px;
     }

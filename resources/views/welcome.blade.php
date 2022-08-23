@@ -8,7 +8,7 @@
             <div class="container">
                 <div class="search my-auto text-center">
                     <div class="d-flex justify-content-center">
-                        <div class="search-bar tex-center w-50 gt-title">
+                        <div class="search-bar tex-center w-50 gt-title ">
                             <h1>Busque um evento</h1>
                             <form action="{{ url('') }}" method="GET">
                                 <input type="text" id="search" name="search" class="form-control" placeholder="Procurar...">

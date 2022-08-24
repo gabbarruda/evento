@@ -37,7 +37,7 @@
                                 @method('DELETE')
 
 
-                                <button type="submit" class="alert alert-warning" role="alert">
+                                <button type="submit" class="alert alert-warning" id="target"  role="alert">
                                     <i class="fa-solid fa-person-walking-arrow-right"></i>Sair do evento!
                                 </button>
                             </form>

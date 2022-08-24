@@ -23,7 +23,8 @@
             integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- JavaScript Bundle with Popper -->
-        <link href="{{ url('') }}/css/contraste.css" id="app-style" rel="stylesheet" type="text/css" />
+        <link href="{{ url('') }}/css/contraste.css" id="app-style" rel="stylesheet" type="text/css"
+         />
 
     </head>
 
@@ -149,7 +150,20 @@
         <script>
             new window.VLibras.Widget('https://vlibras.gov.br/app');
         </script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>$(document).ready(function() {
+        console.log("ready!");
     
+        $("#target").click(function() {
+            Swal.fire({
+           
+                icon: 'success',
+                title: 'Concluído com sucesso!',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        });
+    });</script>
 </body>
 
 </html>

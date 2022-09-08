@@ -4,7 +4,8 @@
 
 @section('content')
 
-<h1>Crie um evento</h1>
+{{-- <h1>Crie um evento</h1> --}}
+<br>
 <div id="event-create-container" class="col-md-6 offset-md-3">
     <h1>Crie o seu evento</h1>
     <form action="{{url('')}}/evento" method="POST" enctype="multipart/form-data">

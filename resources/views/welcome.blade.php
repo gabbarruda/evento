@@ -9,13 +9,15 @@
                 <div class="search my-auto text-center">
                     <div class="d-flex justify-content-center">
                         <div class="search-bar tex-center w-55 gt-title ">
-                            <h1>Busque um evento</h1>
-                            <form action="{{ url('') }}" method="GET">
+            
+                            <form action="{{ url('') }}" method="GET" class="form-cta">
                                 <input type="text" id="search" name="search" class="form-control" placeholder="Procurar...">
+                                <button>  Busque um evento</button>
                             </form>
+
                         </div>
                     </div>
-                  
+
                 </div>
             </div>
           

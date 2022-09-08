@@ -26,7 +26,9 @@
         <link href="{{ url('') }}/css/contraste.css" id="app-style" rel="stylesheet" type="text/css"
          />
 
+        @yield('css')
     </head>
+
 
 <body class="sm:w-1/2 mb-10 px-7display-6 ">
 
@@ -81,7 +83,7 @@
 
 
 
-        
+
         </div>
         </nav>
         <!-- BUSCA / ACESSIBILIDADE -->
@@ -127,43 +129,45 @@
     <script>
         src = "https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"
     </script>
-        @yield('modal')
-        <!-- JAVASCRIPT -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        
-        <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
-        </script>
-        <script src="{{ url('') }}/js/acessibilidade.js"></script>
-        
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-        @yield('js')
-        @yield('jss')
-        <div vw class="enabled">
-            <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper>
-                <div class="vw-plugin-top-wrapper"></div>
-            </div>
+    @yield('modal')
+    <!-- JAVASCRIPT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
+    <script src="{{ url('') }}/js/acessibilidade.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    @yield('js')
+    @yield('jss')
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
         </div>
-        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-        <script>
-            new window.VLibras.Widget('https://vlibras.gov.br/app');
-        </script>
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>$(document).ready(function() {
-        console.log("ready!");
-    
-        $("#target").click(function() {
-            Swal.fire({
-           
-                icon: 'success',
-                title: 'Concluído com sucesso!',
-                showConfirmButton: false,
-                timer: 1500
-            })
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        $(document).ready(function() {
+            console.log("ready!");
+
+            $("#target").click(function() {
+                Swal.fire({
+
+                    icon: 'success',
+                    title: 'Concluído com sucesso!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            });
         });
-    });</script>
+    </script>
 </body>
 
 </html>

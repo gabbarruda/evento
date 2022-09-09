@@ -32,7 +32,7 @@
 
 <body class="sm:w-1/2 mb-10 px-7display-6 ">
 
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom fixed-top header">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4  fixed-top header">
         <a href="{{ url('') }}/" class="d-flex align-items-center mb-3 mb-md-0  text-white ">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
                 stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img"
